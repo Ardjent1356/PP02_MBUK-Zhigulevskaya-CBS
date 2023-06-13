@@ -1,0 +1,50 @@
+﻿<Window x:Class="LibraryWpf.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryWpf"
+        mc:Ignorable="d"
+        Title="Пользователь" Height="467" Width="413" Icon="uj2TZXPaFLE 2.png" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Frame 15 (2).png"/>
+        </Grid.Background>
+        <Label Content="Имя:" HorizontalAlignment="Left" Margin="158,141,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Фамилия:" HorizontalAlignment="Left" Margin="158,179,0,0" VerticalAlignment="Top" FontSize="20" Width="96"/>
+        <Label Content="Роль:" HorizontalAlignment="Left" Margin="158,216,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="254,145,0,0" TextWrapping="Wrap" Text="Флинн" VerticalAlignment="Top" Width="137" FontSize="20"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="21,141,0,0" VerticalAlignment="Top" Height="126" Width="132">
+            <Label.Background>
+                <ImageBrush ImageSource="2023-06-11_18-14-46.png"/>
+            </Label.Background>
+        </Label>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="254,183,0,0" TextWrapping="Wrap" Text="Карсен" VerticalAlignment="Top" Width="137" FontSize="20"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="254,220,0,0" TextWrapping="Wrap" Text="Библиотекарь" VerticalAlignment="Top" Width="137" FontSize="20"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="356,10,0,0" VerticalAlignment="Top" Width="27" BorderBrush="White" Height="22" Foreground="Black" Click="Button_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image Name="image"
+              Stretch="Fill" Source="/source/icons8-выход-26.png" />
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                  Value="true">
+                            <Setter TargetName="image"
+                  Property="Source"
+                  Value="/source/icons8-выход-26.png" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                  Value="true">
+                            <Setter TargetName="image"
+                  Property="Source"
+                  Value="/source/icons8-выход-26 (1).png" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <Button Content="Главное меню" HorizontalAlignment="Left" Margin="126,340,0,0" VerticalAlignment="Top" Width="143" Height="40" FontSize="20" Background="#FFFDFDFD" BorderBrush="Black" Click="Button_Click_1" BorderThickness="2"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,51 @@
+﻿<Window x:Class="LibraryWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryWpf"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="455" Width="381"  Icon="uj2TZXPaFLE 2.png" WindowStyle="ThreeDBorderWindow" Foreground="#FF141414" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="Frame 15.png"/>
+        </Grid.Background>
+        <Label Content="Логин:" HorizontalAlignment="Left" Height="36" Margin="50,140,0,-150.4" VerticalAlignment="Top" Width="92" FontSize="20"/>
+        <TextBox Name="TextLog" HorizontalAlignment="Left" Height="29" Margin="50,176,0,-179.4" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" TextChanged="TextBox_TextChanged" BorderBrush="#FF080808" FontSize="21" BorderThickness="1"/>
+        <Label Content="Пароль:" HorizontalAlignment="Left" Height="35" Margin="50,205,0,-214.4" VerticalAlignment="Top" Width="107" FontSize="20"/>
+        <PasswordBox Name="Password_1" HorizontalAlignment="Left" Height="29" Margin="50,240,0,-248.4" VerticalAlignment="Top" Width="242" RenderTransformOrigin="0.482,3.33" BorderBrush="#FF080808" FontSize="22" />
+        <Button Name="ButLog" Content="Войти" HorizontalAlignment="Left" Margin="99,343,0,-355.4" VerticalAlignment="Top" Width="171" Height="38" BorderBrush="#FF030303" Background="White" RenderTransformOrigin="0,0" FontSize="21" BorderThickness="2" Click="Button_Click"/>
+        <TextBox Name ="Password_2" HorizontalAlignment="Left" Height="29" Margin="50,240,0,-248.4" Visibility="Collapsed" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="242"  FontSize="20" BorderBrush="Black" BorderThickness="1"/>
+        <CheckBox Content="" Name="showPassword" Unchecked="ShowPassword_Unchecked"  Checked="ShowPassword_Checked"  HorizontalAlignment="Left" Height="42" Margin="312,249,0,-265.4" VerticalAlignment="Top" Width="38"/>
+        <Label Name ="CapchLabel" Content="i8h0" HorizontalAlignment="Left" Height="36" Margin="43,282,0,-292.4"  VerticalAlignment="Top" Width="88" FontSize="20" RenderTransformOrigin="0.514,0.319" Visibility="Collapsed" />
+        <TextBox x:Name="CapchTextBox" HorizontalAlignment="Left" Height="30" Margin="136,288,0,-292.4"  TextWrapping="Wrap" VerticalAlignment="Top" Width="156" FontSize="20" BorderBrush="Black" BorderThickness="1" Visibility="Collapsed"/>
+        <Button Name="СaptchButton" Click="UpdateCaptcha"  HorizontalAlignment="Left" Height="19" Margin="312,296,0,-289.4"  VerticalAlignment="Top" Width="19" RenderTransformOrigin="0.13,0.391" BorderBrush="{x:Null}" Visibility="Collapsed">
+            <Button.Background>
+                <ImageBrush ImageSource="icons8-обновить-50.png"/>
+            </Button.Background>
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Image Name="image"
+              Stretch="Fill" Source="/source/icons8-обновить-50.png" />
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver"
+                  Value="true">
+                            <Setter TargetName="image"
+                  Property="Source"
+                  Value="/source/icons8-обновить-50.png" />
+                        </Trigger>
+                        <Trigger Property="IsPressed"
+                  Value="true">
+                            <Setter TargetName="image"
+                  Property="Source"
+                  Value="/source/icons8-обновить-50 (1).png" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>
